@@ -1,6 +1,6 @@
 import { getTag } from 'helpers/tags';
 
-const getRandomGif = (tag, rating) => {
+const getRandomGif = (tag:string, rating:string) => {
   return {
     types: ['GET_GIF', 'GET_GIF_SUCCESS', 'GET_GIF_FAIL'],
     payload: {
@@ -12,7 +12,7 @@ const getRandomGif = (tag, rating) => {
   };
 }
 
-const setCurrentTag = tag => {
+const setCurrentTag = (tag:string) => {
   return {
     type: 'SET_CURRENT_TAG',
     payload: {
@@ -20,9 +20,9 @@ const setCurrentTag = tag => {
     }
   };
 }
-const random = (score, rating = 'PG') => {
+const random = (score:any, rating = 'PG') => {
   const tag = getTag(score);
-  return dispatch => {
+  return (dispatch:Function) => {
     return Promise.all([
       dispatch(getRandomGif(tag, rating)),
       dispatch(setCurrentTag(tag))

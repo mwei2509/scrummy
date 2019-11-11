@@ -1,4 +1,4 @@
-export default function reduce (prevState, action) {
+export default function reduce (prevState:any, action:any) {
   let connection = { ...prevState.connection };
 
   if (action.type === 'CONNECT_TO_SOCKET') {

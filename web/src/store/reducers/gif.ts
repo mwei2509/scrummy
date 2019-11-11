@@ -1,4 +1,4 @@
-export default function reduce (prevState, action) {
+export default function reduce (prevState:any, action:any) {
   let { gif = {} } = prevState || {};
 
   if (action.type === 'GET_GIF_SUCCESS') {

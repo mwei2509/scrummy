@@ -1,4 +1,4 @@
-export default function reduce (prevState, action) {
+export default function reduce (prevState:any, action:any) {
 
   if (action.type === 'SET_CURRENT_TAG') {
     return { ...prevState, tag: action.payload.data };

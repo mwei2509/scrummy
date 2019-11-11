@@ -5,11 +5,11 @@ const reducers = [
   require('./socket').default
 ];
 
-export default function reduce (prevState, action) {
+export default function reduce (prevState:any, action:any) {
   const stateWithoutError = { ...(prevState || {}) };
   delete stateWithoutError.error;
 
-  const reducer = (state, currentFn) => currentFn(state, action);
+  const reducer = (state:any, currentFn:any) => currentFn(state, action);
 
   return reducers.reduce(reducer, { ...stateWithoutError });
 }
