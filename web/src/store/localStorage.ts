@@ -12,7 +12,7 @@ export const loadState = () => {
   }
 };
 
-export const saveState = (state = {}) => {
+export const saveState = (state = { default: {} }) => {
   try {
     // const cleanedConnection = {
     //   ...state.default.connection

@@ -19,7 +19,7 @@ const appReducer = combineReducers({
   default: reduce
 });
 
-const rootReducer = (state, action) => {
+const rootReducer = (state:any, action:any) => {
   if (action.type === 'LOGOUT') {
     state = undefined;
   }
@@ -39,8 +39,8 @@ let composeEnhancers = compose;
 
 if (process.env.NODE_ENV === 'development') {
   composeEnhancers =
-    (window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ &&
-      window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({ trace: true, traceLimit: 10 })) ||
+    ((window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ &&
+      (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({ trace: true, traceLimit: 10 })) ||
     compose;
 }
 
