@@ -12,7 +12,6 @@ import UpdateName from 'views/game/dashboard/updateName';
 import ScrumMasterDuties from 'views/game/dashboard/scrumMasterDuties';
 
 // elements
-import Title from 'ui/components/title';
 import Button from 'ui/components/button';
 import Wrapper from 'ui/components/wrapper';
 import Section from 'ui/components/section';
@@ -38,17 +37,6 @@ class Dashboard extends React.Component {
     );
   }
 }
-
-const ButtonWrapper = styled('div')`
-  display: flex;
-  flex-direction: column;
-`;
-
-const StyledButton = styled(Button)`
-  width: 100%;
-  padding: ${theme.spacing.small}px;
-  margin: ${theme.spacing.xxsmall}px 0 0 0;
-`;
 
 export default connect(
   null,

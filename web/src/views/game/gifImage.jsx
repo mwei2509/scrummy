@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import theme from 'ui/styles/theme';
 
 const GifImage = props => {
   const { gif, fullWidth, width } = props;

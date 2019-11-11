@@ -2,15 +2,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { push } from 'connected-react-router';
 import gif from 'store/actions/gif';
-import styled from '@emotion/styled';
-import theme from 'ui/styles/theme';
 
 // components
 import GifImage from 'views/game/gifImage';
 
 // elements
 import Title from 'ui/components/title';
-import Button from 'ui/components/button';
 import Wrapper from 'ui/components/wrapper';
 import SectionButton from 'ui/components/sectionButton';
 

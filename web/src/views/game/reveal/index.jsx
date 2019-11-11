@@ -10,7 +10,6 @@ import GifImage from 'views/game/gifImage';
 
 // elements
 import Title from 'ui/components/title';
-import Button from 'ui/components/button';
 import Wrapper from 'ui/components/wrapper';
 import Section from 'ui/components/section';
 import SectionButton from 'ui/components/sectionButton';

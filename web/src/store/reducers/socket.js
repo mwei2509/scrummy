@@ -1,7 +1,3 @@
-import config from 'config';
-import openSocket from 'socket.io-client';
-const { api_url } = config;
-
 export default function reduce (prevState, action) {
   let connection = { ...prevState.connection };
 

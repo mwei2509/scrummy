@@ -6,12 +6,9 @@ import scores from 'store/actions/score';
 import ratings from 'store/actions/rating';
 
 import styled from '@emotion/styled';
-import theme from 'ui/styles/theme';
 
 // components
 import Wrapper from 'ui/components/wrapper';
-import Button from 'ui/components/button';
-import Section from 'ui/components/section';
 import SectionButton from 'ui/components/sectionButton';
 
 const mapStateToProps = state => {
