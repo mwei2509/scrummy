@@ -1,7 +1,11 @@
 import styled from '@emotion/styled';
 import theme from 'ui/styles/theme';
 
-const Wrapper = styled('div')`
+type WrapperType = {
+  noStretch: boolean
+};
+
+const Wrapper = styled('div')<WrapperType>`
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;

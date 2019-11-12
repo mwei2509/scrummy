@@ -1,4 +1,4 @@
-const connectToSocket = socket => {
+const connectToSocket = (socket:any) => {
   return {
     type: 'CONNECT_TO_SOCKET',
     payload: {
@@ -7,7 +7,7 @@ const connectToSocket = socket => {
   }
 };
 
-const connectUser = (userId, gameId) => {
+const connectUser = (userId:string, gameId:string) => {
 	return {
 		type: 'CONNECT_USER_TO_GAME',
 		payload: {
@@ -17,7 +17,7 @@ const connectUser = (userId, gameId) => {
 	}
 };
 
-const receiveGameUpdate = game => {
+const receiveGameUpdate = (game:any) => {
   return {
     type: 'RECEIVE_GAME_UPDATE',
     payload: { game }

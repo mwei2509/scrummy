@@ -1,7 +1,14 @@
 import styled from '@emotion/styled';
 import theme from 'ui/styles/theme';
 
-const Title = styled('span')`
+type TitleProps = {
+  xl: boolean,
+  fullWidth: boolean,
+  left: boolean,
+  right: boolean
+};
+
+const Title = styled('span')<TitleProps>`
   font-size: ${props => props.xl ? theme.fontSizes.x5large : theme.fontSizes.x2large};
   color: ${theme.colors.theme0.Blue1};
   font-weight: 900;

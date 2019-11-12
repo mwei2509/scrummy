@@ -6,12 +6,21 @@ import theme from 'ui/styles/theme';
 import Section from './section';
 import Button from './button';
 
-const SectionButton = props => {
-  const { onClick, fullWidth } = props;
+type SectionButton = {
+  onClick: Function,
+  children: any
+}
+
+const SectionButton = (props:SectionButton) => {
+  const { onClick } = props;
+
+  const handleClick = (event:React.MouseEvent) => {
+    onClick(event);
+  }
 
   return (
     <StyledSection fullWidth>
-      <StyledButton onClick={onClick}>
+      <StyledButton onClick={handleClick}>
         {props.children}
       </StyledButton>
     </StyledSection>

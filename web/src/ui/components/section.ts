@@ -1,7 +1,11 @@
 import styled from '@emotion/styled';
 import theme from 'ui/styles/theme';
 
-const Section = styled('section')`
+type SectionProps = {
+  fullWidth: boolean
+}
+
+const Section = styled('section')<SectionProps>`
   ${p => p.fullWidth ? 'width: 100%;':''}
   color: ${theme.colors.White};
   font-size: ${theme.fontSizes.large};
